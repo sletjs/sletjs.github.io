@@ -2,6 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sletjs.com/zh-cn/docs/index.html</loc>
+    
+    <lastmod>2016-12-15T00:37:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/setup.html</loc>
+    
+    <lastmod>2016-12-15T00:33:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/filter.html</loc>
+    
+    <lastmod>2016-12-15T00:31:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/router.html</loc>
+    
+    <lastmod>2016-12-15T00:26:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/controller.html</loc>
+    
+    <lastmod>2016-12-15T00:26:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/front-matter.html</loc>
+    
+    <lastmod>2016-12-15T00:25:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/controller-ext.html</loc>
+    
+    <lastmod>2016-12-15T00:18:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/http.html</loc>
+    
+    <lastmod>2016-12-15T00:14:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/docs/controller.html</loc>
+    
+    <lastmod>2016-12-14T23:59:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/api/controller.html</loc>
+    
+    <lastmod>2016-12-14T23:58:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sletjs.com/zh-cn/index.html</loc>
     
     <lastmod>2016-12-13T16:01:44.000Z</lastmod>
@@ -16,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/configuration.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sletjs.com/zh-cn/api/console.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
@@ -30,63 +93,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/box.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/filter.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/deployer.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/events.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/helper.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/generator.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sletjs.com/zh-cn/api/locals.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/index.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/processor.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -101,6 +108,20 @@
   
   <url>
     <loc>https://sletjs.com/zh-cn/api/posts.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/api/processor.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/api/renderer.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -128,20 +149,6 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/themes.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/renderer.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sletjs.com/zh-cn/api/tag.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
@@ -149,21 +156,21 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/tag-plugins.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/themes.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/asset-folders.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/deployer.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/commands.html</loc>
+    <loc>https://sletjs.com/zh-cn/docs/configuration.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -171,6 +178,27 @@
   
   <url>
     <loc>https://sletjs.com/zh-cn/docs/contributing.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/api/filter.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/api/events.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/data-files.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -191,20 +219,6 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/front-matter.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/docs/data-files.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sletjs.com/zh-cn/docs/helpers.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
@@ -212,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/migration.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/box.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -226,7 +240,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/index.html</loc>
+    <loc>https://sletjs.com/zh-cn/docs/migration.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -247,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/setup.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/generator.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -261,14 +275,21 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/templates.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/helper.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/troubleshooting.html</loc>
+    <loc>https://sletjs.com/zh-cn/docs/tag-plugins.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/templates.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -282,6 +303,13 @@
   </url>
   
   <url>
+    <loc>https://sletjs.com/zh-cn/docs/troubleshooting.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sletjs.com/zh-cn/docs/variables.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
@@ -289,35 +317,21 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/writing.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/index.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/docs/troubleshooting.html</loc>
+    <loc>https://sletjs.com/zh-cn/docs/commands.html</loc>
     
-    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/docs/templates.html</loc>
-    
-    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/news/2015/02/27/new-documentation-and-registry/</loc>
-    
-    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/docs/variables.html</loc>
+    <loc>https://sletjs.com/news/2014/07/13/hexo-2-8-released/</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -338,7 +352,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/news/2014/07/13/hexo-2-8-released/</loc>
+    <loc>https://sletjs.com/news/2015/03/05/hexo-3-0-released/</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -346,13 +360,6 @@
   
   <url>
     <loc>https://sletjs.com/news/2016/02/28/hexo-3-2-released/</loc>
-    
-    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/news/2015/03/05/hexo-3-0-released/</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -380,6 +387,13 @@
   </url>
   
   <url>
+    <loc>https://sletjs.com/api/controller.html</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sletjs.com/api/deployer.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
@@ -394,6 +408,13 @@
   </url>
   
   <url>
+    <loc>https://sletjs.com/api/filter.html</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sletjs.com/api/generator.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
@@ -401,7 +422,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/api/filter.html</loc>
+    <loc>https://sletjs.com/api/helper.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -422,14 +443,14 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/api/helper.html</loc>
+    <loc>https://sletjs.com/api/migrator.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/api/migrator.html</loc>
+    <loc>https://sletjs.com/api/posts.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -450,14 +471,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/api/posts.html</loc>
-    
-    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/api/scaffolds.html</loc>
+    <loc>https://sletjs.com/api/rendering.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -471,7 +485,14 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/api/rendering.html</loc>
+    <loc>https://sletjs.com/api/scaffolds.html</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/api/tag.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -485,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/api/tag.html</loc>
+    <loc>https://sletjs.com/docs/asset-folders.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -506,13 +527,6 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/docs/data-files.html</loc>
-    
-    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sletjs.com/docs/contributing.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
@@ -520,7 +534,14 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/docs/asset-folders.html</loc>
+    <loc>https://sletjs.com/news/2015/02/27/new-documentation-and-registry/</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/docs/data-files.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -541,13 +562,6 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/docs/helpers.html</loc>
-    
-    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sletjs.com/docs/generating.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
@@ -555,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/docs/internationalization.html</loc>
+    <loc>https://sletjs.com/docs/helpers.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -569,7 +583,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/docs/permalinks.html</loc>
+    <loc>https://sletjs.com/docs/internationalization.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -577,6 +591,13 @@
   
   <url>
     <loc>https://sletjs.com/docs/migration.html</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/docs/permalinks.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     
@@ -604,6 +625,20 @@
   </url>
   
   <url>
+    <loc>https://sletjs.com/docs/tag-plugins.html</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/docs/templates.html</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sletjs.com/docs/themes.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
@@ -611,7 +646,14 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/docs/tag-plugins.html</loc>
+    <loc>https://sletjs.com/docs/troubleshooting.html</loc>
+    
+    <lastmod>2016-12-13T02:41:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/docs/variables.html</loc>
     
     <lastmod>2016-12-13T02:41:23.000Z</lastmod>
     

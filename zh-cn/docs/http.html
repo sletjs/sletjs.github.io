@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>HTTP基础 | Slet</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://sletjs.com/zh-cn/docs/http.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://sletjs.com/zh-cn/docs/http.html">
+    
+      <link rel="alternative" hreflang="en" href="https://sletjs.com/docs/http.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Slet">
+  <!-- Open Graph -->
+  <meta name="description" content="处理请求参数的3种方法QueryString当curl命令发起Post测试请求，带有name参数
+curl http://127.0.0.1:6001/posts?a=1&amp;amp;b=2
+此时，你可以通过
+get () &amp;#123;  let a = this.query.a  let b = this.query.b&amp;#125;post () &amp;#123;  let a = this.query">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HTTP基础">
+<meta property="og:url" content="https://sletjs.com/zh-cn/docs/http.html">
+<meta property="og:site_name" content="Slet">
+<meta property="og:description" content="处理请求参数的3种方法QueryString当curl命令发起Post测试请求，带有name参数
+curl http://127.0.0.1:6001/posts?a=1&amp;amp;b=2
+此时，你可以通过
+get () &amp;#123;  let a = this.query.a  let b = this.query.b&amp;#125;post () &amp;#123;  let a = this.query">
+<meta property="og:updated_time" content="2016-12-15T00:14:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP基础">
+<meta name="twitter:description" content="处理请求参数的3种方法QueryString当curl命令发起Post测试请求，带有name参数
+curl http://127.0.0.1:6001/posts?a=1&amp;amp;b=2
+此时，你可以通过
+get () &amp;#123;  let a = this.query.a  let b = this.query.b&amp;#125;post () &amp;#123;  let a = this.query">
+<meta name="twitter:site" content="sletjs">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4910098-10', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/zh-cn/api/" class="main-nav-link">API</a><a href="/news/" class="main-nav-link">新闻</a><a href="/plugins/" class="main-nav-link">插件</a><a href="/themes/" class="main-nav-link">主题</a>
+      <a href="https://github.com/sletjs/slet" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/http.html">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">HTTP基础</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/zh-cn/docs/http.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="处理请求参数的3种方法" class="article-heading"><a href="#处理请求参数的3种方法" class="headerlink" title="处理请求参数的3种方法"></a>处理请求参数的3种方法<a class="article-anchor" href="#处理请求参数的3种方法" aria-hidden="true"></a></h2><h3 id="QueryString" class="article-heading"><a href="#QueryString" class="headerlink" title="QueryString"></a>QueryString<a class="article-anchor" href="#QueryString" aria-hidden="true"></a></h3><p>当curl命令发起Post测试请求，带有name参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">curl http://127.0.0.1:6001/posts?a=1&amp;b=2</div></pre></td></tr></table></figure>
+<p>此时，你可以通过</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">get () &#123;</div><div class="line">  let a = this.query.a</div><div class="line">  let b = this.query.b</div><div class="line">&#125;</div><div class="line"></div><div class="line">post () &#123;</div><div class="line">  let a = this.query.a</div><div class="line">  let b = this.query.b</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>QueryString适用于任何情况，所以this.query常常和另外的this.params和this.body组合使用。</p>
+<h3 id="路由参数" class="article-heading"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数<a class="article-anchor" href="#路由参数" aria-hidden="true"></a></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">posts/:<span class="function"><span class="params">id</span> =&gt;</span> posts/<span class="number">89</span></div></pre></td></tr></table></figure>
+<p>此时，你可以通过</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">get () &#123;</div><div class="line">  let id = this.params.id</div><div class="line">  // 此时id = 89</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个只有在路由path里有占位（具名路由）才有用。</p>
+<h3 id="Body" class="article-heading"><a href="#Body" class="headerlink" title="Body"></a>Body<a class="article-anchor" href="#Body" aria-hidden="true"></a></h3><p>对于Post、Put、Patch、Delete、Link、Unlink等需要解析表单内容的verb，你需要是使用this.body</p>
+<p>当curl命令发起Post测试请求，带有name参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">curl -d &quot;name=&apos;foo&apos;&quot; http://127.0.0.1:6001/c</div></pre></td></tr></table></figure>
+<p>处理如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">post () &#123;</div><div class="line">  let _name = this.body.name</div><div class="line">  // 此时_name = &apos;foo&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Post" class="article-heading"><a href="#Post" class="headerlink" title="Post"></a>Post<a class="article-anchor" href="#Post" aria-hidden="true"></a></h2><p>首先，先了解一下关于http协议里定义的四种常见数据的post方法，分别是： </p>
+<ul>
+<li>application/www-form-ulrencoded </li>
+<li>multipart/form-data </li>
+<li>application/json </li>
+<li>text/xml</li>
+</ul>
+<h2 id="上传" class="article-heading"><a href="#上传" class="headerlink" title="上传"></a>上传<a class="article-anchor" href="#上传" aria-hidden="true"></a></h2><ul>
+<li>UploadController</li>
+<li>UploadViewController</li>
+</ul>
+<h3 id="UploadController" class="article-heading"><a href="#UploadController" class="headerlink" title="UploadController"></a>UploadController<a class="article-anchor" href="#UploadController" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ npm i -S slet</div><div class="line">$ npm i -S slet-uploadcontroller</div></pre></td></tr></table></figure>
+<p>编写uploadctrl.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">const UploadController = require(&apos;slet&apos;).UploadController</div><div class="line"></div><div class="line">module.exports = class MyUploadController extends UploadController &#123;</div><div class="line">  constructor(app, ctx, next) &#123;</div><div class="line">    super(app, ctx, next)</div><div class="line">    </div><div class="line">    this.post_filter = [this.upload.single(&apos;avatar&apos;)]</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  post() &#123; </div><div class="line">    return &#123;</div><div class="line">      msg: &apos;this is a upload&apos;</div><div class="line">    &#125;</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里使用了post_filter拦截器，具体参加文档。</p>
+<p>这里使用的单一文件，更多方法参见</p>
+<ul>
+<li><a href="https://github.com/expressjs/multer" target="_blank" rel="external">https://github.com/expressjs/multer</a></li>
+<li><a href="https://github.com/koa-modules/multer" target="_blank" rel="external">https://github.com/koa-modules/multer</a></li>
+</ul>
+<h3 id="UploadViewController" class="article-heading"><a href="#UploadViewController" class="headerlink" title="UploadViewController"></a>UploadViewController<a class="article-anchor" href="#UploadViewController" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ npm i -S slet</div><div class="line">$ npm i -S slet-viewcontroller</div><div class="line">$ npm i -S nunjucks</div><div class="line">$ npm i -S slet-uploadviewcontroller</div></pre></td></tr></table></figure>
+<p>编写uploadctrl.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">const UploadViewController = require(&apos;slet&apos;).UploadViewController</div><div class="line"></div><div class="line">module.exports = class MyUploadController extends UploadViewController &#123;</div><div class="line">  constructor(app, ctx, next) &#123;</div><div class="line">    super(app, ctx, next)</div><div class="line">    </div><div class="line">    this.post_filter = [this.upload.single(&apos;avatar&apos;)]</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  post() &#123; </div><div class="line">    return &#123;</div><div class="line">      tpl: &apos;index&apos;,</div><div class="line">      data: &#123;</div><div class="line">        title: &apos;this a upload view&apos;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果通过<code>this.renderType = &#39;default&#39;</code>也可以实现UploadController的效果</p>
+<h3 id="示例" class="article-heading"><a href="#示例" class="headerlink" title="示例"></a>示例<a class="article-anchor" href="#示例" aria-hidden="true"></a></h3><ul>
+<li><a href="https://github.com/sletjs/example-upload" target="_blank" rel="external">example-upload</a></li>
+<li><a href="https://github.com/sletjs/example-upload-view" target="_blank" rel="external">example-upload-view</a></li>
+</ul>
+<h2 id="总结" class="article-heading"><a href="#总结" class="headerlink" title="总结"></a>总结<a class="article-anchor" href="#总结" aria-hidden="true"></a></h2>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2016-12-15T00:14:19.000Z" itemprop="dateModified">上次更新：2016-12-15</time>
+                <a href="controller.html" class="article-footer-prev" title="sidebar.docs.controller"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="filter.html" class="article-footer-next" title="sidebar.docs.filter"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'sletjs';
+  var disqus_url = 'https://sletjs.com/zh-cn/docs/http.html';
+  var disqus_title = "HTTP基础";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#处理请求参数的3种方法"><span class="toc-text">处理请求参数的3种方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#QueryString"><span class="toc-text">QueryString</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由参数"><span class="toc-text">路由参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Body"><span class="toc-text">Body</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Post"><span class="toc-text">Post</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传"><span class="toc-text">上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UploadController"><span class="toc-text">UploadController</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UploadViewController"><span class="toc-text">UploadViewController</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="setup.html" class="sidebar-link">建站</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a><strong class="sidebar-title">基本操作</strong><a href="router.html" class="sidebar-link">sidebar.docs.router</a><a href="controller.html" class="sidebar-link">sidebar.docs.controller</a><a href="http.html" class="sidebar-link current">sidebar.docs.http</a><a href="filter.html" class="sidebar-link">sidebar.docs.filter</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><a href="deployment.html" class="sidebar-link">部署</a><strong class="sidebar-title">自定义</strong><a href="controller-ext.html" class="sidebar-link">sidebar.docs.controller-ext</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link">插件</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2016 <a href="https://cnodejs.org/user/i5ting" target="_blank">狼叔</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/sletjs" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/sletjs/slet" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/zh-cn/api/" class="mobile-nav-link">API</a><a href="/news/" class="mobile-nav-link">新闻</a><a href="/plugins/" class="mobile-nav-link">插件</a><a href="/themes/" class="mobile-nav-link">主题</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/sletjs/slet" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="setup.html" class="mobile-nav-link">建站</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="commands.html" class="mobile-nav-link">命令</a><a href="migration.html" class="mobile-nav-link">迁移</a><strong class="mobile-nav-title">基本操作</strong><a href="router.html" class="mobile-nav-link">sidebar.docs.router</a><a href="controller.html" class="mobile-nav-link">sidebar.docs.controller</a><a href="http.html" class="mobile-nav-link current">sidebar.docs.http</a><a href="filter.html" class="mobile-nav-link">sidebar.docs.filter</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">标签插件</a><a href="asset-folders.html" class="mobile-nav-link">资源文件夹</a><a href="data-files.html" class="mobile-nav-link">数据文件夹</a><a href="server.html" class="mobile-nav-link">服务器</a><a href="generating.html" class="mobile-nav-link">生成器</a><a href="deployment.html" class="mobile-nav-link">部署</a><strong class="mobile-nav-title">自定义</strong><a href="controller-ext.html" class="mobile-nav-link">sidebar.docs.controller-ext</a><a href="themes.html" class="mobile-nav-link">主题</a><a href="templates.html" class="mobile-nav-link">模版</a><a href="variables.html" class="mobile-nav-link">变量</a><a href="helpers.html" class="mobile-nav-link">辅助函数</a><a href="internationalization.html" class="mobile-nav-link">国际化 (i18n)</a><a href="plugins.html" class="mobile-nav-link">插件</a><strong class="mobile-nav-title">其他</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/http.html">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
+  indexName: 'hexo_zh-cn',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>
