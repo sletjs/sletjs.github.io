@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sletjs.com/zh-cn/docs/controller-ext.html</loc>
+    
+    <lastmod>2016-12-15T15:04:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/extend.html</loc>
+    
+    <lastmod>2016-12-15T15:01:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/docs/plugins.html</loc>
+    
+    <lastmod>2016-12-15T14:57:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sletjs.com/zh-cn/docs/router.html</loc>
     
     <lastmod>2016-12-15T02:04:46.000Z</lastmod>
@@ -58,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/controller-ext.html</loc>
-    
-    <lastmod>2016-12-15T00:18:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sletjs.com/docs/controller.html</loc>
     
     <lastmod>2016-12-14T23:59:16.000Z</lastmod>
@@ -89,20 +103,6 @@
     <loc>https://sletjs.com/index.html</loc>
     
     <lastmod>2016-12-13T14:19:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/docs/deployment.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/api/locals.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/deployer.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/box.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/box.html</loc>
+    <loc>https://sletjs.com/zh-cn/docs/deployment.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -233,7 +233,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/docs/plugins.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/deployer.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -241,13 +241,6 @@
   
   <url>
     <loc>https://sletjs.com/zh-cn/api/generator.html</loc>
-    
-    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/docs/server.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -318,6 +311,13 @@
   
   <url>
     <loc>https://sletjs.com/zh-cn/api/posts.html</loc>
+    
+    <lastmod>2016-12-13T02:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sletjs.com/zh-cn/api/locals.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     

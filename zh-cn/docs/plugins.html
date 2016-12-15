@@ -41,22 +41,28 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Slet">
   <!-- Open Graph -->
-  <meta name="description" content="Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：
-脚本（Scripts）如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 scripts 文件夹，在启动时就会自动载入。
-插件（Packages）如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 node_modules 文件夹中建立文件">
+  <meta name="description" content="已有
+
+slet-plugin-static
+
+方法1&amp;apos;use strict&amp;apos;const StaticPlugin = require(&amp;apos;slet-plugin-static&amp;apos;)const Slet = require(&amp;apos;slet&amp;apos;)// 经典用法Slet.plugin(StaticPlugin)const app = new Slet(">
 <meta property="og:type" content="website">
 <meta property="og:title" content="插件">
 <meta property="og:url" content="https://sletjs.com/zh-cn/docs/plugins.html">
 <meta property="og:site_name" content="Slet">
-<meta property="og:description" content="Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：
-脚本（Scripts）如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 scripts 文件夹，在启动时就会自动载入。
-插件（Packages）如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 node_modules 文件夹中建立文件">
-<meta property="og:updated_time" content="2016-12-13T02:41:24.000Z">
+<meta property="og:description" content="已有
+
+slet-plugin-static
+
+方法1&amp;apos;use strict&amp;apos;const StaticPlugin = require(&amp;apos;slet-plugin-static&amp;apos;)const Slet = require(&amp;apos;slet&amp;apos;)// 经典用法Slet.plugin(StaticPlugin)const app = new Slet(">
+<meta property="og:updated_time" content="2016-12-15T14:57:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="插件">
-<meta name="twitter:description" content="Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：
-脚本（Scripts）如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 scripts 文件夹，在启动时就会自动载入。
-插件（Packages）如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 node_modules 文件夹中建立文件">
+<meta name="twitter:description" content="已有
+
+slet-plugin-static
+
+方法1&amp;apos;use strict&amp;apos;const StaticPlugin = require(&amp;apos;slet-plugin-static&amp;apos;)const Slet = require(&amp;apos;slet&amp;apos;)// 经典用法Slet.plugin(StaticPlugin)const app = new Slet(">
 <meta name="twitter:site" content="sletjs">
 <meta property="fb:admins" content="100000247608790">
   <!-- Google Analytics -->
@@ -120,38 +126,30 @@
                 <a href="https://github.com/hexojs/site/edit/master/source/zh-cn/docs/plugins.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：</p>
-<h3 id="脚本（Scripts）" class="article-heading"><a href="#脚本（Scripts）" class="headerlink" title="脚本（Scripts）"></a>脚本（Scripts）<a class="article-anchor" href="#脚本（Scripts）" aria-hidden="true"></a></h3><p>如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 <code>scripts</code> 文件夹，在启动时就会自动载入。</p>
-<h3 id="插件（Packages）" class="article-heading"><a href="#插件（Packages）" class="headerlink" title="插件（Packages）"></a>插件（Packages）<a class="article-anchor" href="#插件（Packages）" aria-hidden="true"></a></h3><p>如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 <code>node_modules</code> 文件夹中建立文件夹，文件夹名称开头必须为 <code>hexo-</code>，如此一来 Hexo 才会在启动时载入否则 Hexo 将会忽略它。</p>
-<p>文件夹内至少要包含 2 个文件：一个是主程序，另一个是 <code>package.json</code>，描述插件的用途和所依赖的插件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">.</div><div class="line">├── index.js</div><div class="line">└── package.json</div></pre></td></tr></table></figure>
-<p><code>package.json</code> 中至少要包含 <code>name</code>, <code>version</code>, <code>main</code> 属性，例如：</p>
-<figure class="highlight json"><figcaption><span>package.json</span></figcaption><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-my-plugin"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.1"</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="工具" class="article-heading"><a href="#工具" class="headerlink" title="工具"></a>工具<a class="article-anchor" href="#工具" aria-hidden="true"></a></h3><p>您可以使用 Hexo 提供的官方工具插件来加速开发：</p>
+                <p>已有</p>
 <ul>
-<li><a href="https://github.com/hexojs/hexo-fs" target="_blank" rel="external">hexo-fs</a>：文件 IO</li>
-<li><a href="https://github.com/hexojs/hexo-util" target="_blank" rel="external">hexo-util</a>：工具程式</li>
-<li><a href="https://github.com/hexojs/hexo-i18n" target="_blank" rel="external">hexo-i18n</a>：本地化（i18n）</li>
-<li><a href="https://github.com/hexojs/hexo-pagination" target="_blank" rel="external">hexo-pagination</a>：生成分页资料</li>
+<li><a href="https://github.com/sletjs/slet-plugin-static" target="_blank" rel="external">slet-plugin-static</a></li>
 </ul>
-<h3 id="发布" class="article-heading"><a href="#发布" class="headerlink" title="发布"></a>发布<a class="article-anchor" href="#发布" aria-hidden="true"></a></h3><p>当您完成插件后，可以考虑将它发布到 <a href="/plugins">插件列表</a>，让更多人能够使用您的插件。发布插件的步骤和 <a href="contributing.html#更新文件">更新文件</a> 非常类似。</p>
-<ol>
-<li>Fork <a href="https://github.com/hexojs/site" target="_blank" rel="external">hexojs/site</a></li>
-<li><p>把库（repository）复制到电脑上，并安装所依赖的插件。</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ git clone https://github.com/&lt;username&gt;/site.git</div><div class="line">$ cd site</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-</li>
-<li><p>编辑 <code>source/_data/plugins.yml</code>，在档案中新增您的插件，例如：</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- name: hexo-server</div><div class="line">  description: Server module for Hexo.</div><div class="line">  link: https://github.com/hexojs/hexo-server</div><div class="line">  tags:</div><div class="line">    - official</div><div class="line">    - server</div><div class="line">    - console</div></pre></td></tr></table></figure>
-</li>
-<li><p>推送（push）分支。</p>
-</li>
-<li>建立一个新的合并申请（pull request）并描述改动。</li>
-</ol>
+<h3 id="方法1" class="article-heading"><a href="#方法1" class="headerlink" title="方法1"></a>方法1<a class="article-anchor" href="#方法1" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&apos;use strict&apos;</div><div class="line"></div><div class="line">const StaticPlugin = require(&apos;slet-plugin-static&apos;)</div><div class="line"></div><div class="line">const Slet = require(&apos;slet&apos;)</div><div class="line"></div><div class="line">// 经典用法</div><div class="line">Slet.plugin(StaticPlugin)</div><div class="line"></div><div class="line">const app = new Slet(&#123;</div><div class="line">  root: __dirname,</div><div class="line">  debug: false</div><div class="line">&#125;)</div><div class="line"></div><div class="line">// lazy load plugin</div><div class="line">app.static()</div><div class="line"></div><div class="line">// app.start(3005)</div><div class="line">module.exports = app</div></pre></td></tr></table></figure>
+<p>步骤</p>
+<ul>
+<li>1）const StaticPlugin = require(‘.’)</li>
+<li>2）Slet.plugin(StaticPlugin)</li>
+<li>3) app.static()<h3 id="方法2" class="article-heading"><a href="#方法2" class="headerlink" title="方法2"></a>方法2<a class="article-anchor" href="#方法2" aria-hidden="true"></a></h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">const StaticPlugin = require(&apos;slet-plugin-static&apos;)</div><div class="line"></div><div class="line">const Slet = require(&apos;slet&apos;);</div><div class="line"></div><div class="line">// 经典用法</div><div class="line">app.plugin(StaticPlugin)</div><div class="line"></div><div class="line">const app = new Slet(&#123;</div><div class="line">    root: __dirname,</div><div class="line">    debug: true</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.static()</div><div class="line"></div><div class="line">app.start(3000)</div></pre></td></tr></table></figure>
+<h3 id="插件定义方法" class="article-heading"><a href="#插件定义方法" class="headerlink" title="插件定义方法"></a>插件定义方法<a class="article-anchor" href="#插件定义方法" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">module.exports = class StaticPlugin &#123;</div><div class="line"></div><div class="line">  static () &#123;</div><div class="line">    if (!this.opts.static) &#123;</div><div class="line">      this.opts.static = &#123;</div><div class="line">        path: this.opts.root + &apos;/public&apos;,</div><div class="line">        opts: &#123;&#125; // https://github.com/koajs/static#options</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    this.use(require(&apos;koa-static&apos;)(this.opts.static.path, this.opts.static.opts));</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li>this.opts是从slet的构造函数里传入的，可以多处改写</li>
+<li>this.use即koa 2.x的use方法，传中间件即可</li>
+<li>只有用到static()方法的时候，才加载require(‘koa-static’)，懒加载</li>
+</ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-12-13T02:41:24.000Z" itemprop="dateModified">上次更新：2016-12-13</time>
-                <a href="internationalization.html" class="article-footer-prev" title="国际化 (i18n)"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="troubleshooting.html" class="article-footer-next" title="问题解答"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2016-12-15T14:57:37.000Z" itemprop="dateModified">上次更新：2016-12-15</time>
+                <a href="controller-ext.html" class="article-footer-prev" title="控制器扩展"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="troubleshooting.html" class="article-footer-next" title="问题解答"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
 <section id="comments">
@@ -176,14 +174,14 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#脚本（Scripts）"><span class="toc-text">脚本（Scripts）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插件（Packages）"><span class="toc-text">插件（Packages）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工具"><span class="toc-text">工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布"><span class="toc-text">发布</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法1"><span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法2"><span class="toc-text">方法2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插件定义方法"><span class="toc-text">插件定义方法</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
         </div>
       </article>
       <aside id="sidebar" role="navigation">
-  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="firstproject.html" class="sidebar-link">入门</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a><strong class="sidebar-title">基本操作</strong><a href="router.html" class="sidebar-link">路由</a><a href="controller.html" class="sidebar-link">控制器</a><a href="http.html" class="sidebar-link">Http基础</a><a href="render.html" class="sidebar-link">渲染</a><a href="filter.html" class="sidebar-link">过滤器</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><a href="deployment.html" class="sidebar-link">部署</a><strong class="sidebar-title">自定义</strong><a href="controller-ext.html" class="sidebar-link">sidebar.docs.controller-ext</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link current">插件</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a></div>
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="firstproject.html" class="sidebar-link">入门</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a><strong class="sidebar-title">基本操作</strong><a href="router.html" class="sidebar-link">路由</a><a href="controller.html" class="sidebar-link">控制器</a><a href="http.html" class="sidebar-link">Http基础</a><a href="render.html" class="sidebar-link">渲染</a><a href="filter.html" class="sidebar-link">过滤器</a><strong class="sidebar-title">自定义</strong><a href="extend.html" class="sidebar-link">扩展</a><a href="controller-ext.html" class="sidebar-link">控制器扩展</a><a href="plugins.html" class="sidebar-link current">插件</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a></div>
 </aside>
     </div>
   </div>
@@ -213,7 +211,7 @@
       </li>
     </ul>
     
-      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="firstproject.html" class="mobile-nav-link">入门</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="commands.html" class="mobile-nav-link">命令</a><a href="migration.html" class="mobile-nav-link">迁移</a><strong class="mobile-nav-title">基本操作</strong><a href="router.html" class="mobile-nav-link">路由</a><a href="controller.html" class="mobile-nav-link">控制器</a><a href="http.html" class="mobile-nav-link">Http基础</a><a href="render.html" class="mobile-nav-link">渲染</a><a href="filter.html" class="mobile-nav-link">过滤器</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">标签插件</a><a href="asset-folders.html" class="mobile-nav-link">资源文件夹</a><a href="data-files.html" class="mobile-nav-link">数据文件夹</a><a href="server.html" class="mobile-nav-link">服务器</a><a href="generating.html" class="mobile-nav-link">生成器</a><a href="deployment.html" class="mobile-nav-link">部署</a><strong class="mobile-nav-title">自定义</strong><a href="controller-ext.html" class="mobile-nav-link">sidebar.docs.controller-ext</a><a href="themes.html" class="mobile-nav-link">主题</a><a href="templates.html" class="mobile-nav-link">模版</a><a href="variables.html" class="mobile-nav-link">变量</a><a href="helpers.html" class="mobile-nav-link">辅助函数</a><a href="internationalization.html" class="mobile-nav-link">国际化 (i18n)</a><a href="plugins.html" class="mobile-nav-link current">插件</a><strong class="mobile-nav-title">其他</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a>
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="firstproject.html" class="mobile-nav-link">入门</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="commands.html" class="mobile-nav-link">命令</a><a href="migration.html" class="mobile-nav-link">迁移</a><strong class="mobile-nav-title">基本操作</strong><a href="router.html" class="mobile-nav-link">路由</a><a href="controller.html" class="mobile-nav-link">控制器</a><a href="http.html" class="mobile-nav-link">Http基础</a><a href="render.html" class="mobile-nav-link">渲染</a><a href="filter.html" class="mobile-nav-link">过滤器</a><strong class="mobile-nav-title">自定义</strong><a href="extend.html" class="mobile-nav-link">扩展</a><a href="controller-ext.html" class="mobile-nav-link">控制器扩展</a><a href="plugins.html" class="mobile-nav-link current">插件</a><strong class="mobile-nav-title">其他</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
