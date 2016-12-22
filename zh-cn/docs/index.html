@@ -55,7 +55,7 @@ Pluggable">
 Features
 Micro Kernel
 Pluggable">
-<meta property="og:updated_time" content="2016-12-20T16:54:07.000Z">
+<meta property="og:updated_time" content="2016-12-22T11:39:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文档">
 <meta name="twitter:description" content="欢迎使用 Sletjs，本文档将帮助您快速上手。如果您在使用过程中遇到问题，请查看 问题解答 中的解答，或者在 GitHub、Google Group 上提问。
@@ -136,7 +136,7 @@ Pluggable">
 <li>Custom View Render</li>
 <li>Convention over Configuration</li>
 </ul>
-<h2 id="示例" class="article-heading"><a href="#示例" class="headerlink" title="示例"></a>示例<a class="article-anchor" href="#示例" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> Slet = <span class="built_in">require</span>(<span class="string">'slet'</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Slet()</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">Slet</span>.<span class="title">BaseController</span> </span>&#123;</div><div class="line">  get (req, res) &#123; </div><div class="line">    <span class="keyword">var</span> a = req.query.a</div><div class="line"></div><div class="line">    <span class="keyword">return</span> res.body = <span class="string">`hello world <span class="subst">$&#123;a&#125;</span>`</span></div><div class="line">  &#125; </div><div class="line">&#125;</div><div class="line"></div><div class="line">app.router(<span class="string">'/'</span>, MyController)</div><div class="line"></div><div class="line">app.start(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
+<h2 id="示例" class="article-heading"><a href="#示例" class="headerlink" title="示例"></a>示例<a class="article-anchor" href="#示例" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> Slet = <span class="built_in">require</span>(<span class="string">'slet'</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Slet()</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">Slet</span>.<span class="title">BaseController</span> </span>&#123;</div><div class="line">  get (req, res) &#123; </div><div class="line">    <span class="keyword">let</span> id = req.params.id</div><div class="line">    <span class="keyword">var</span> a = req.query.a</div><div class="line"></div><div class="line">    <span class="comment">// return res.body = `hello world $&#123;a&#125;`</span></div><div class="line">    <span class="keyword">return</span> <span class="string">`hello world id=<span class="subst">$&#123;id&#125;</span> &amp;&amp; query=<span class="subst">$&#123;a&#125;</span>`</span></div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  post(req, res) &#123;</div><div class="line">    <span class="keyword">let</span> id = req.params.id</div><div class="line">    <span class="keyword">var</span> a = req.body.a</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> res.body = &#123;</div><div class="line">      <span class="attr">id</span>: id,</div><div class="line">      <span class="attr">query</span>: a</div><div class="line">    &#125;</div><div class="line">  &#125; </div><div class="line">&#125;</div><div class="line"></div><div class="line">app.router(<span class="string">'/'</span>, MyController)</div><div class="line"></div><div class="line">app.start(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
 <h2 id="安装" class="article-heading"><a href="#安装" class="headerlink" title="安装"></a>安装<a class="article-anchor" href="#安装" aria-hidden="true"></a></h2><p>安装 Slet 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请<a href="https://github.com/sletjs/slet/issues" target="_blank" rel="external">提交问题</a>，我会尽力解决您的问题。</p>
 <h3 id="安装前提" class="article-heading"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提<a class="article-anchor" href="#安装前提" aria-hidden="true"></a></h3><p>安装 Slet 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
 <ul>
@@ -167,7 +167,7 @@ Pluggable">
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-12-20T16:54:07.000Z" itemprop="dateModified">上次更新：2016-12-20</time>
+                <time class="article-footer-updated" datetime="2016-12-22T11:39:37.000Z" itemprop="dateModified">上次更新：2016-12-22</time>
                 <a href="firstproject.html" class="article-footer-next" title="入门"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

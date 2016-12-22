@@ -42,21 +42,21 @@
   <link rel="alternate" href="/atom.xml" title="Slet">
   <!-- Open Graph -->
   <meta name="description" content="安装slet模块$ npm i -S slet
-从app.js开始&apos;use strict&apos;;const Slet = require(&apos;slet&apos;);const app = new Slet(&amp;#123;    root: __dirname,    debug: true&amp;#125;);app.router(&apos;/&apos;, &apos;./basicctrl&apos;)  app.start(3000)
-编写basic">
+从app.js开始&apos;use strict&apos;;const Slet = require(&apos;slet&apos;);const app = new Slet();app.router(&apos;/&apos;, &apos;./basicctrl&apos;)  app.start(3000)
+编写basicctrl.js&apos;use strict&apos;;const BasicController = req">
 <meta property="og:type" content="website">
 <meta property="og:title" content="第一个例子">
 <meta property="og:url" content="https://sletjs.com/zh-cn/docs/firstproject.html">
 <meta property="og:site_name" content="Slet">
 <meta property="og:description" content="安装slet模块$ npm i -S slet
-从app.js开始&apos;use strict&apos;;const Slet = require(&apos;slet&apos;);const app = new Slet(&amp;#123;    root: __dirname,    debug: true&amp;#125;);app.router(&apos;/&apos;, &apos;./basicctrl&apos;)  app.start(3000)
-编写basic">
-<meta property="og:updated_time" content="2016-12-15T00:43:43.000Z">
+从app.js开始&apos;use strict&apos;;const Slet = require(&apos;slet&apos;);const app = new Slet();app.router(&apos;/&apos;, &apos;./basicctrl&apos;)  app.start(3000)
+编写basicctrl.js&apos;use strict&apos;;const BasicController = req">
+<meta property="og:updated_time" content="2016-12-22T11:43:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一个例子">
 <meta name="twitter:description" content="安装slet模块$ npm i -S slet
-从app.js开始&apos;use strict&apos;;const Slet = require(&apos;slet&apos;);const app = new Slet(&amp;#123;    root: __dirname,    debug: true&amp;#125;);app.router(&apos;/&apos;, &apos;./basicctrl&apos;)  app.start(3000)
-编写basic">
+从app.js开始&apos;use strict&apos;;const Slet = require(&apos;slet&apos;);const app = new Slet();app.router(&apos;/&apos;, &apos;./basicctrl&apos;)  app.start(3000)
+编写basicctrl.js&apos;use strict&apos;;const BasicController = req">
 <meta name="twitter:site" content="sletjs">
 <meta property="fb:admins" content="100000247608790">
   <!-- Google Analytics -->
@@ -121,8 +121,8 @@
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h2 id="安装slet模块" class="article-heading"><a href="#安装slet模块" class="headerlink" title="安装slet模块"></a>安装slet模块<a class="article-anchor" href="#安装slet模块" aria-hidden="true"></a></h2><figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">$ npm i -S slet</div></pre></td></tr></table></figure>
-<h2 id="从app-js开始" class="article-heading"><a href="#从app-js开始" class="headerlink" title="从app.js开始"></a>从app.js开始<a class="article-anchor" href="#从app-js开始" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> Slet = <span class="built_in">require</span>(<span class="string">'slet'</span>);</div><div class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Slet(&#123;</div><div class="line">    <span class="attr">root</span>: __dirname,</div><div class="line">    <span class="attr">debug</span>: <span class="literal">true</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.router(<span class="string">'/'</span>, <span class="string">'./basicctrl'</span>)  </div><div class="line"></div><div class="line">app.start(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
-<h2 id="编写basicctrl-js" class="article-heading"><a href="#编写basicctrl-js" class="headerlink" title="编写basicctrl.js"></a>编写basicctrl.js<a class="article-anchor" href="#编写basicctrl-js" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> BasicController = <span class="built_in">require</span>(<span class="string">'slet'</span>).BasicController</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = <span class="class"><span class="keyword">class</span> <span class="title">MyBasicController</span> <span class="keyword">extends</span> <span class="title">BasicController</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(app, ctx, next) &#123;</div><div class="line">    <span class="keyword">super</span>(app, ctx, next)</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  get() &#123; </div><div class="line">    <span class="keyword">let</span> a = <span class="keyword">this</span>.query.a</div><div class="line">    <span class="comment">// this.renderType='view'</span></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">a</span>: <span class="string">'this is a'</span>,</div><div class="line">      <span class="attr">b</span>: &#123;</div><div class="line">        <span class="attr">c</span>: <span class="string">'ssddssdd a= '</span> + a</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="从app-js开始" class="article-heading"><a href="#从app-js开始" class="headerlink" title="从app.js开始"></a>从app.js开始<a class="article-anchor" href="#从app-js开始" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> Slet = <span class="built_in">require</span>(<span class="string">'slet'</span>);</div><div class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Slet();</div><div class="line"></div><div class="line">app.router(<span class="string">'/'</span>, <span class="string">'./basicctrl'</span>)  </div><div class="line"></div><div class="line">app.start(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
+<h2 id="编写basicctrl-js" class="article-heading"><a href="#编写basicctrl-js" class="headerlink" title="编写basicctrl.js"></a>编写basicctrl.js<a class="article-anchor" href="#编写basicctrl-js" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> BasicController = <span class="built_in">require</span>(<span class="string">'slet'</span>).BaseController</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = <span class="class"><span class="keyword">class</span> <span class="title">MyBasicController</span> <span class="keyword">extends</span> <span class="title">BaseController</span> </span>&#123;</div><div class="line">  get (req, res) &#123; </div><div class="line">    <span class="keyword">let</span> a = req.query.a</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">a</span>: <span class="string">'this is a'</span>,</div><div class="line">      <span class="attr">b</span>: &#123;</div><div class="line">        <span class="attr">c</span>: <span class="string">'ssddssdd a= '</span> + a</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="启动server" class="article-heading"><a href="#启动server" class="headerlink" title="启动server"></a>启动server<a class="article-anchor" href="#启动server" aria-hidden="true"></a></h2><p>最后，执行app.js，启动server</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><div class="line">$ node app.js</div></pre></td></tr></table></figure>
 <h2 id="查验结果" class="article-heading"><a href="#查验结果" class="headerlink" title="查验结果"></a>查验结果<a class="article-anchor" href="#查验结果" aria-hidden="true"></a></h2><p>在浏览器中打开 <a href="http://127.0.0.1:3000/?a=2" target="_blank" rel="external">http://127.0.0.1:3000/?a=2</a></p>
@@ -136,7 +136,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-12-15T00:43:43.000Z" itemprop="dateModified">上次更新：2016-12-15</time>
+                <time class="article-footer-updated" datetime="2016-12-22T11:43:04.000Z" itemprop="dateModified">上次更新：2016-12-22</time>
                 <a href="index.html" class="article-footer-prev" title="概述"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="configuration.html" class="article-footer-next" title="配置"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
