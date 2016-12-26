@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>控制台（Console） | Slet</title>
+  <title>响应（Response） | Slet</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -41,88 +41,19 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Slet">
   <!-- Open Graph -->
-  <meta name="description" content="控制台是 Hexo 与开发者之间沟通的桥梁。
-概要hexo.extend.console.register(name, desc, options, function(args)&amp;#123;  // ...&amp;#125;);
-
-
-
-参数
-描述
-
-
-
-
-name
-名称
-
-
-desc
-描述
-
-
-options
-选项
-
-
-
-在函数中会传入 args 参数，此参数是使用者在终端中所传入的参数，是一个经 Mi">
+  <meta name="description" content="The res object represents the HTTP response that an Express app sends when it gets an HTTP request.
+In this documentation and by convention, the object is always referred to as res (and the HTTP reque">
 <meta property="og:type" content="website">
-<meta property="og:title" content="控制台（Console）">
+<meta property="og:title" content="响应（Response）">
 <meta property="og:url" content="https://sletjs.com/zh-cn/api/response.html">
 <meta property="og:site_name" content="Slet">
-<meta property="og:description" content="控制台是 Hexo 与开发者之间沟通的桥梁。
-概要hexo.extend.console.register(name, desc, options, function(args)&amp;#123;  // ...&amp;#125;);
-
-
-
-参数
-描述
-
-
-
-
-name
-名称
-
-
-desc
-描述
-
-
-options
-选项
-
-
-
-在函数中会传入 args 参数，此参数是使用者在终端中所传入的参数，是一个经 Mi">
-<meta property="og:updated_time" content="2016-12-13T02:41:24.000Z">
+<meta property="og:description" content="The res object represents the HTTP response that an Express app sends when it gets an HTTP request.
+In this documentation and by convention, the object is always referred to as res (and the HTTP reque">
+<meta property="og:updated_time" content="2016-12-26T08:13:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="控制台（Console）">
-<meta name="twitter:description" content="控制台是 Hexo 与开发者之间沟通的桥梁。
-概要hexo.extend.console.register(name, desc, options, function(args)&amp;#123;  // ...&amp;#125;);
-
-
-
-参数
-描述
-
-
-
-
-name
-名称
-
-
-desc
-描述
-
-
-options
-选项
-
-
-
-在函数中会传入 args 参数，此参数是使用者在终端中所传入的参数，是一个经 Mi">
+<meta name="twitter:title" content="响应（Response）">
+<meta name="twitter:description" content="The res object represents the HTTP response that an Express app sends when it gets an HTTP request.
+In this documentation and by convention, the object is always referred to as res (and the HTTP reque">
 <meta name="twitter:site" content="sletjs">
 <meta property="fb:admins" content="100000247608790">
   <!-- Google Analytics -->
@@ -182,47 +113,212 @@ options
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">控制台（Console）</h1>
+                <h1 class="article-title" itemprop="name">响应（Response）</h1>
                 <a href="https://github.com/hexojs/site/edit/master/source/zh-cn/api/response.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>控制台是 Hexo 与开发者之间沟通的桥梁。</p>
-<h2 id="概要" class="article-heading"><a href="#概要" class="headerlink" title="概要"></a>概要<a class="article-anchor" href="#概要" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">hexo.extend.console.register(name, desc, options, <span class="function"><span class="keyword">function</span>(<span class="params">args</span>)</span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>name</code></td>
-<td>名称</td>
-</tr>
-<tr>
-<td><code>desc</code></td>
-<td>描述</td>
-</tr>
-<tr>
-<td><code>options</code></td>
-<td>选项</td>
-</tr>
-</tbody>
-</table>
-<p>在函数中会传入 <code>args</code> 参数，此参数是使用者在终端中所传入的参数，是一个经 <a href="https://github.com/substack/minimist" target="_blank" rel="external">Minimist</a> 解析的对象。</p>
-<h2 id="选项" class="article-heading"><a href="#选项" class="headerlink" title="选项"></a>选项<a class="article-anchor" href="#选项" aria-hidden="true"></a></h2><h3 id="用法" class="article-heading"><a href="#用法" class="headerlink" title="用法"></a>用法<a class="article-anchor" href="#用法" aria-hidden="true"></a></h3><p>控制台的操作方法，例如：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;<span class="attr">usage</span>: <span class="string">'[layout] &lt;title&gt;'</span>&#125;</div><div class="line"><span class="comment">// hexo new [layout] &lt;title&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="参数" class="article-heading"><a href="#参数" class="headerlink" title="参数"></a>参数<a class="article-anchor" href="#参数" aria-hidden="true"></a></h3><p>控制台各个参数的说明，例如：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">arguments</span>: [</div><div class="line">    &#123;<span class="attr">name</span>: <span class="string">'layout'</span>, <span class="attr">desc</span>: <span class="string">'Post layout'</span>&#125;,</div><div class="line">    &#123;<span class="attr">name</span>: <span class="string">'title'</span>, <span class="attr">desc</span>: <span class="string">'Post title'</span>&#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="选项-1" class="article-heading"><a href="#选项-1" class="headerlink" title="选项"></a>选项<a class="article-anchor" href="#选项-1" aria-hidden="true"></a></h3><p>控制台的选项，例如：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">options</span>: [</div><div class="line">    &#123;<span class="attr">name</span>: <span class="string">'-r, --replace'</span>, <span class="attr">desc</span>: <span class="string">'Replace existing files'</span>&#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="描述" class="article-heading"><a href="#描述" class="headerlink" title="描述"></a>描述<a class="article-anchor" href="#描述" aria-hidden="true"></a></h3><p>控制台更详细的说明。</p>
-<h2 id="范例" class="article-heading"><a href="#范例" class="headerlink" title="范例"></a>范例<a class="article-anchor" href="#范例" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">hexo.extend.console.register(<span class="string">'config'</span>, <span class="string">'Display configuration'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">args</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(hexo.config);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-
+                <p>The res object represents the HTTP response that an Express app sends when it gets an HTTP request.</p>
+<p>In this documentation and by convention, the object is always referred to as res (and the HTTP request is req) but its actual name is determined by the parameters to the callback function in which you’re working.</p>
+<p>For example:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// slet</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">BaseController</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span> (ctx, next) &#123;</div><div class="line">    <span class="keyword">super</span>(ctx, next)</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.path = <span class="string">'/user/:id'</span></div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  get (req, res) &#123;</div><div class="line">    res.send(<span class="string">'user '</span> + req.params.id);</div><div class="line">  &#125; </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// express</span></div><div class="line">app.get(<span class="string">'/user/:id'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>&#123;</div><div class="line">  res.send(<span class="string">'user '</span> + req.params.id);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>But you could just as well have:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// slet</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">BaseController</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span> (ctx, next) &#123;</div><div class="line">    <span class="keyword">super</span>(ctx, next)</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.path = <span class="string">'/user/:id'</span></div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  get (request, response) &#123;</div><div class="line">    response.send(<span class="string">'user '</span> + request.params.id);</div><div class="line">  &#125; </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// express</span></div><div class="line">app.get(<span class="string">'/user/:id'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>)</span>&#123;</div><div class="line">  response.send(<span class="string">'user '</span> + request.params.id);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>The res object is an enhanced version of Node’s own response object and supports all built-in fields and methods.</p>
+<h1 id="Properties" class="article-heading"><a href="#Properties" class="headerlink" title="Properties"></a>Properties<a class="article-anchor" href="#Properties" aria-hidden="true"></a></h1><h2 id="res-app" class="article-heading"><a href="#res-app" class="headerlink" title="res.app"></a>res.app<a class="article-anchor" href="#res-app" aria-hidden="true"></a></h2><p>暂时未实现</p>
+<p>This property holds a reference to the instance of the Express application that is using the middleware.</p>
+<p>res.app is identical to the req.app property in the request object.</p>
+<h2 id="res-headersSent" class="article-heading"><a href="#res-headersSent" class="headerlink" title="res.headersSent"></a>res.headersSent<a class="article-anchor" href="#res-headersSent" aria-hidden="true"></a></h2><p>Check if a response header has already been sent. Useful for seeing if the client may be notified on error.</p>
+<p>Boolean property that indicates if the app sent HTTP headers for the response.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">get(req, res) &#123;</div><div class="line">  <span class="built_in">console</span>.log(res.headersSent); <span class="comment">// false</span></div><div class="line">  res.send(<span class="string">'OK'</span>);</div><div class="line">  <span class="built_in">console</span>.log(res.headersSent); <span class="comment">// true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="res-locals" class="article-heading"><a href="#res-locals" class="headerlink" title="res.locals"></a>res.locals<a class="article-anchor" href="#res-locals" aria-hidden="true"></a></h2><p>express里推荐用locals，而koa中推荐state，故而，将slet的req.locals转为koa的state，但是api保持不变</p>
+<p>An object that contains response local variables scoped to the request, and therefore available only to the view(s) rendered during that request / response cycle (if any). Otherwise, this property is identical to app.locals.</p>
+<p>This property is useful for exposing request-level information such as the request path name, authenticated user, user settings, and so on.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">Slet</span>.<span class="title">BaseController</span> </span>&#123;</div><div class="line">  get (req, res) &#123; </div><div class="line">    <span class="keyword">var</span> a = req.query.a</div><div class="line"></div><div class="line">     res.locals.user = &#123;<span class="attr">a</span>:<span class="number">1</span>&#125;</div><div class="line">    <span class="comment">// return res.body = `hello world $&#123;a&#125;`</span></div><div class="line">    res.send(<span class="string">`hello world <span class="subst">$&#123;a&#125;</span>`</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>此时的res.locals.user = this.ctx.state.user</p>
+<h1 id="Methods" class="article-heading"><a href="#Methods" class="headerlink" title="Methods"></a>Methods<a class="article-anchor" href="#Methods" aria-hidden="true"></a></h1><h2 id="res-append-field-value" class="article-heading"><a href="#res-append-field-value" class="headerlink" title="res.append(field [, value])"></a>res.append(field [, value])<a class="article-anchor" href="#res-append-field-value" aria-hidden="true"></a></h2><p>Appends the specified value to the HTTP response header field. If the header is not already set, it creates the header with the specified value. The value parameter can be a string or an array.</p>
+<p>Note: calling res.set() after res.append() will reset the previously-set header value.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.append(<span class="string">'Link'</span>, [<span class="string">'&lt;http://localhost/&gt;'</span>, <span class="string">'&lt;http://localhost:3000/&gt;'</span>]);</div><div class="line">res.append(<span class="string">'Set-Cookie'</span>, <span class="string">'foo=bar; Path=/; HttpOnly'</span>);</div><div class="line">res.append(<span class="string">'Warning'</span>, <span class="string">'199 Miscellaneous warning'</span>);</div></pre></td></tr></table></figure>
+<h2 id="res-attachment-filename" class="article-heading"><a href="#res-attachment-filename" class="headerlink" title="res.attachment([filename])"></a>res.attachment([filename])<a class="article-anchor" href="#res-attachment-filename" aria-hidden="true"></a></h2><p>Sets the HTTP response Content-Disposition header field to “attachment”. If a filename is given, then it sets the Content-Type based on the extension name via res.type(), and sets the Content-Disposition “filename=” parameter.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.attachment();</div><div class="line"><span class="comment">// Content-Disposition: attachment</span></div><div class="line"></div><div class="line">res.attachment(<span class="string">'path/to/logo.png'</span>);</div><div class="line"><span class="comment">// Content-Disposition: attachment; filename="logo.png"</span></div><div class="line"><span class="comment">// Content-Type: image/png</span></div></pre></td></tr></table></figure>
+<h2 id="res-cookie-name-value-options" class="article-heading"><a href="#res-cookie-name-value-options" class="headerlink" title="res.cookie(name, value [, options])"></a>res.cookie(name, value [, options])<a class="article-anchor" href="#res-cookie-name-value-options" aria-hidden="true"></a></h2><p>Sets cookie name to value. The value parameter may be a string or object converted to JSON.</p>
+<p>The options parameter is an object that can have the following properties.</p>
+<p>参见<a href="http://expressjs.com/en/4x/api.html#res.cookie" target="_blank" rel="external">http://expressjs.com/en/4x/api.html#res.cookie</a></p>
+<blockquote>
+<p>req.cookies（侧重于取） = res.cookie（侧重于设置）</p>
+</blockquote>
+<p>而在koa里都是ctx.cookies，故而koa的api更精简，而express更富有表现力</p>
+<h2 id="res-download-path-filename-fn" class="article-heading"><a href="#res-download-path-filename-fn" class="headerlink" title="res.download(path [, filename] [, fn])"></a>res.download(path [, filename] [, fn])<a class="article-anchor" href="#res-download-path-filename-fn" aria-hidden="true"></a></h2><p>Transfers the file at path as an “attachment”. Typically, browsers will prompt the user for download. By default, the Content-Disposition header “filename=” parameter is path (this typically appears in the browser dialog). Override this default with the filename parameter.</p>
+<p>When an error ocurrs or transfer is complete, the method calls the optional callback function fn. This method uses res.sendFile() to transfer the file.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.download(<span class="string">'/report-12345.pdf'</span>);</div><div class="line"></div><div class="line">res.download(<span class="string">'/report-12345.pdf'</span>, <span class="string">'report.pdf'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class MyController extends Slet.BaseController &#123;</div><div class="line">  get (req, res) &#123; </div><div class="line">    var a = req.query.a</div><div class="line"></div><div class="line">    return res.download(&apos;/package.json&apos;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="res-sendFile-path-options" class="article-heading"><a href="#res-sendFile-path-options" class="headerlink" title="res.sendFile(path [, options] )"></a>res.sendFile(path [, options] )<a class="article-anchor" href="#res-sendFile-path-options" aria-hidden="true"></a></h2><ul>
+<li>移除了callback</li>
+<li>返回值是promise</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class MyController extends Slet.BaseController &#123;</div><div class="line">  get (req, res) &#123; </div><div class="line">    var a = req.query.a</div><div class="line"></div><div class="line">    return res.sendFile(&apos;/package.json&apos;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="res-end-data-encoding" class="article-heading"><a href="#res-end-data-encoding" class="headerlink" title="res.end([data] [, encoding])"></a>res.end([data] [, encoding])<a class="article-anchor" href="#res-end-data-encoding" aria-hidden="true"></a></h2><p>Ends the response process. This method actually comes from Node core, specifically the response.end() method of http.ServerResponse.</p>
+<p>Use to quickly end the response without any data. If you need to respond with data, instead use methods such as res.send() and res.json().</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.end();</div><div class="line">res.status(<span class="number">404</span>).end();</div></pre></td></tr></table></figure>
+<h2 id="res-status-code" class="article-heading"><a href="#res-status-code" class="headerlink" title="res.status(code)"></a>res.status(code)<a class="article-anchor" href="#res-status-code" aria-hidden="true"></a></h2><p>Sets the HTTP status for the response. It is a chainable alias of Node’s response.statusCode.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.status = <span class="number">403</span></div><div class="line">res.end();</div><div class="line"></div><div class="line">res.status = <span class="number">400</span></div><div class="line">res.send(<span class="string">'Bad Request'</span>);</div><div class="line"></div><div class="line">res.status = <span class="number">404</span></div><div class="line">res.sendFile(<span class="string">'/absolute/path/to/404.png'</span>);</div></pre></td></tr></table></figure>
+<p>不在支持链式写法,但可以使用setStatus进行链式写法</p>
+<h2 id="res-vary-field" class="article-heading"><a href="#res-vary-field" class="headerlink" title="res.vary(field)"></a>res.vary(field)<a class="article-anchor" href="#res-vary-field" aria-hidden="true"></a></h2><p>Adds the field to the Vary response header, if it is not there already.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.vary(<span class="string">'User-Agent'</span>).render(<span class="string">'docs'</span>);</div></pre></td></tr></table></figure>
+<h2 id="res-type-type" class="article-heading"><a href="#res-type-type" class="headerlink" title="res.type(type)"></a>res.type(type)<a class="article-anchor" href="#res-type-type" aria-hidden="true"></a></h2><p>Sets the Content-Type HTTP header to the MIME type as determined by mime.lookup() for the specified type. If type contains the “/” character, then it sets the Content-Type to type.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.type(<span class="string">'.html'</span>);              <span class="comment">// =&gt; 'text/html'</span></div><div class="line">res.type(<span class="string">'html'</span>);               <span class="comment">// =&gt; 'text/html'</span></div><div class="line">res.type(<span class="string">'json'</span>);               <span class="comment">// =&gt; 'application/json'</span></div><div class="line">res.type(<span class="string">'application/json'</span>);   <span class="comment">// =&gt; 'application/json'</span></div><div class="line">res.type(<span class="string">'png'</span>);                <span class="comment">// =&gt; image/png:</span></div></pre></td></tr></table></figure>
+<h2 id="res-sendStatus-statusCode" class="article-heading"><a href="#res-sendStatus-statusCode" class="headerlink" title="res.sendStatus(statusCode)"></a>res.sendStatus(statusCode)<a class="article-anchor" href="#res-sendStatus-statusCode" aria-hidden="true"></a></h2><p>Sets the response HTTP status code to statusCode and send its string representation as the response body.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.sendStatus(<span class="number">200</span>); <span class="comment">// equivalent to res.status(200).send('OK')</span></div><div class="line">res.sendStatus(<span class="number">403</span>); <span class="comment">// equivalent to res.status(403).send('Forbidden')</span></div><div class="line">res.sendStatus(<span class="number">404</span>); <span class="comment">// equivalent to res.status(404).send('Not Found')</span></div><div class="line">res.sendStatus(<span class="number">500</span>); <span class="comment">// equivalent to res.status(500).send('Internal Server Error')</span></div></pre></td></tr></table></figure>
+<p>If an unsupported status code is specified, the HTTP status is still set to statusCode and the string version of the code is sent as the response body.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">res.sendStatus(<span class="number">2000</span>); <span class="comment">// equivalent to res.status(2000).send('2000')</span></div></pre></td></tr></table></figure>
+<p>More about HTTP Status Codes</p>
+<h2 id="res-redirect-url-alt" class="article-heading"><a href="#res-redirect-url-alt" class="headerlink" title="res.redirect(url, [alt])"></a>res.redirect(url, [alt])<a class="article-anchor" href="#res-redirect-url-alt" aria-hidden="true"></a></h2><p>Perform a [302] redirect to url.</p>
+<p>The string “back” is special-cased to provide Referrer support, when Referrer is not present alt or “/“ is used.</p>
+<p>this.redirect(‘back’);<br>this.redirect(‘back’, ‘/index.html’);<br>this.redirect(‘/login’);<br>this.redirect(‘<a href="http://google.com" target="_blank" rel="external">http://google.com</a>‘);<br>To alter the default status of 302, simply assign the status before or after this call. To alter the body, assign it after this call:</p>
+<p>this.status = 301;<br>this.redirect(‘/cart’);<br>this.body = ‘Redirecting to shopping cart’;</p>
+<h2 id="res-links-links" class="article-heading"><a href="#res-links-links" class="headerlink" title="res.links(links)"></a>res.links(links)<a class="article-anchor" href="#res-links-links" aria-hidden="true"></a></h2><p>Joins the links provided as properties of the parameter to populate the response’s Link HTTP header field.</p>
+<p>For example, the following call:</p>
+<p>res.links({<br>  next: ‘<a href="http://api.example.com/users?page=2" target="_blank" rel="external">http://api.example.com/users?page=2</a>‘,<br>  last: ‘<a href="http://api.example.com/users?page=5" target="_blank" rel="external">http://api.example.com/users?page=5</a>‘<br>});<br>Yields the following results:</p>
+<p>Link: <a href="http://api.example.com/users?page=2" target="_blank" rel="external">http://api.example.com/users?page=2</a>; rel=”next”,<br>      <a href="http://api.example.com/users?page=5" target="_blank" rel="external">http://api.example.com/users?page=5</a>; rel=”last”</p>
+<h2 id="res-location-path" class="article-heading"><a href="#res-location-path" class="headerlink" title="res.location(path)"></a>res.location(path)<a class="article-anchor" href="#res-location-path" aria-hidden="true"></a></h2><p>Sets the response Location HTTP header to the specified path parameter.</p>
+<p>res.location(‘/foo/bar’);<br>res.location(‘<a href="http://example.com" target="_blank" rel="external">http://example.com</a>‘);<br>res.location(‘back’);</p>
+<p>A path value of “back” has a special meaning, it refers to the URL specified in the Referer header of the request. If the Referer header was not specified, it refers to “/”.</p>
+<h2 id="res-json-body" class="article-heading"><a href="#res-json-body" class="headerlink" title="res.json([body])"></a>res.json([body])<a class="article-anchor" href="#res-json-body" aria-hidden="true"></a></h2><p>Sends a JSON response. This method sends a response (with the correct content-type) that is the parameter converted to a JSON string using JSON.stringify().</p>
+<p>The parameter can be any JSON type, including object, array, string, Boolean, or number, and you can also use it to convert other values to JSON, such as null, and undefined (although these are technically not valid JSON).</p>
+<p>res.json(null);<br>res.json({ user: ‘tobi’ });<br>res.status(500).json({ error: ‘message’ });</p>
+<h2 id="res-jsonp-body" class="article-heading"><a href="#res-jsonp-body" class="headerlink" title="res.jsonp([body])"></a>res.jsonp([body])<a class="article-anchor" href="#res-jsonp-body" aria-hidden="true"></a></h2><p>Sends a JSON response with JSONP support. This method is identical to res.json(), except that it opts-in to JSONP callback support.</p>
+<p>res.jsonp(null);<br>// =&gt; null</p>
+<p>res.jsonp({ user: ‘tobi’ });<br>// =&gt; { “user”: “tobi” }</p>
+<p>res.status(500).jsonp({ error: ‘message’ });<br>// =&gt; { “error”: “message” }</p>
+<p>说明，express支持</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">app.set(&apos;jsonp callback name&apos;, &apos;cb&apos;);</div></pre></td></tr></table></figure>
+<p>这里为了精简，使用class上下文的jsonp_callback_name</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class MyController extends BaseController &#123;</div><div class="line">  constructor (ctx, next) &#123;</div><div class="line">    super(ctx, next)</div><div class="line">    </div><div class="line">    this.jsonp_callback_name = &apos;cb&apos;</div><div class="line">    this.path = &apos;/user/:id&apos;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  get (req, res) &#123;</div><div class="line">    res.jsonp(&#123;a:1&#125;);</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当然也可以通过callback作为querystring来设置。</p>
+<h2 id="res-get-field" class="article-heading"><a href="#res-get-field" class="headerlink" title="res.get(field)"></a>res.get(field)<a class="article-anchor" href="#res-get-field" aria-hidden="true"></a></h2><p>Returns the HTTP response header specified by field. The match is case-insensitive.</p>
+<p>res.get(‘Content-Type’);<br>// =&gt; “text/plain”</p>
+<h2 id="res-format-object" class="article-heading"><a href="#res-format-object" class="headerlink" title="res.format(object)"></a>res.format(object)<a class="article-anchor" href="#res-format-object" aria-hidden="true"></a></h2><p>Performs content-negotiation on the Accept HTTP header on the request object, when present. It uses req.accepts() to select a handler for the request, based on the acceptable types ordered by their quality values. If the header is not specified, the first callback is invoked. When no match is found, the server responds with 406 “Not Acceptable”, or invokes the default callback.</p>
+<p>The Content-Type response header is set when a callback is selected. However, you may alter this within the callback using methods such as res.set() or res.type().</p>
+<p>The following example would respond with { “message”: “hey” } when the Accept header field is set to “application/json” or “<em>/json” (however if it is “</em>/*”, then the response will be “hey”).</p>
+<p>res.format({<br>  ‘text/plain’: function(){<br>    res.send(‘hey’);<br>  },</p>
+<p>  ‘text/html’: function(){<br>    res.send(‘</p><p>hey</p>‘);<br>  },<p></p>
+<p>  ‘application/json’: function(){<br>    // curl -i -H “Accept: application/json” -H “Content-Type: application/json”   <a href="http://127.0.0.1:3000/detail\?a\=1\&amp;b\=3" target="_blank" rel="external">http://127.0.0.1:3000/detail\?a\=1\&amp;b\=3</a><br>    res.send({ message: ‘hey’ });<br>  },</p>
+<p>  ‘default’: function() {<br>    // log the request and respond with 406<br>    res.status(406).send(‘Not Acceptable’);<br>  }<br>});</p>
+<p>In addition to canonicalized MIME types, you may also use extension names mapped to these types for a slightly less verbose implementation:</p>
+<p>res.format({<br>  text: function(){<br>    res.send(‘hey’);<br>  },</p>
+<p>  html: function(){<br>    res.send(‘</p><p>hey</p>‘);<br>  },<p></p>
+<p>  json: function(){<br>    res.send({ message: ‘hey’ });<br>  }<br>});</p>
+<h2 id="res-render-view-locals" class="article-heading"><a href="#res-render-view-locals" class="headerlink" title="res.render(view [, locals])"></a>res.render(view [, locals])<a class="article-anchor" href="#res-render-view-locals" aria-hidden="true"></a></h2><p>Renders a view and sends the rendered HTML string to the client. Optional parameters:</p>
+<ul>
+<li>locals, an object whose properties define local variables for the view.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">// send the rendered view to the client</div><div class="line">res.render(&apos;index&apos;);</div><div class="line"></div><div class="line">// if a callback is specified, the rendered HTML string has to be sent explicitly</div><div class="line">res.locals = &#123; name: &apos;Tobi&apos; &#125;</div><div class="line">res.render(&apos;index&apos;);</div><div class="line"></div><div class="line">// pass a local variable to the view</div><div class="line">res.render(&apos;user&apos;, &#123; name: &apos;Tobi&apos; &#125;);</div></pre></td></tr></table></figure>
+<h1 id="Koa" class="article-heading"><a href="#Koa" class="headerlink" title="Koa"></a>Koa<a class="article-anchor" href="#Koa" aria-hidden="true"></a></h1><h2 id="response-header" class="article-heading"><a href="#response-header" class="headerlink" title="response.header"></a>response.header<a class="article-anchor" href="#response-header" aria-hidden="true"></a></h2><p>Response header object.</p>
+<h2 id="response-headers" class="article-heading"><a href="#response-headers" class="headerlink" title="response.headers"></a>response.headers<a class="article-anchor" href="#response-headers" aria-hidden="true"></a></h2><p>Response header object. Alias as response.header.</p>
+<h2 id="response-socket" class="article-heading"><a href="#response-socket" class="headerlink" title="response.socket"></a>response.socket<a class="article-anchor" href="#response-socket" aria-hidden="true"></a></h2><p>Request socket.</p>
+<h2 id="response-status" class="article-heading"><a href="#response-status" class="headerlink" title="response.status"></a>response.status<a class="article-anchor" href="#response-status" aria-hidden="true"></a></h2><p>Get response status. By default, response.status is not set unlike node’s res.statusCode which defaults to 200.</p>
+<h2 id="response-status-1" class="article-heading"><a href="#response-status-1" class="headerlink" title="response.status="></a>response.status=<a class="article-anchor" href="#response-status-1" aria-hidden="true"></a></h2><p>Set response status via numeric code:</p>
+<ul>
+<li>100 “continue”</li>
+<li>101 “switching protocols”</li>
+<li>102 “processing”</li>
+<li>200 “ok”</li>
+<li>201 “created”</li>
+<li>202 “accepted”</li>
+<li>203 “non-authoritative information”</li>
+<li>204 “no content”</li>
+<li>205 “reset content”</li>
+<li>206 “partial content”</li>
+<li>207 “multi-status”</li>
+<li>300 “multiple choices”</li>
+<li>301 “moved permanently”</li>
+<li>302 “moved temporarily”</li>
+<li>303 “see other”</li>
+<li>304 “not modified”</li>
+<li>305 “use proxy”</li>
+<li>307 “temporary redirect”</li>
+<li>400 “bad request”</li>
+<li>401 “unauthorized”</li>
+<li>402 “payment required”</li>
+<li>403 “forbidden”</li>
+<li>404 “not found”</li>
+<li>405 “method not allowed”</li>
+<li>406 “not acceptable”</li>
+<li>407 “proxy authentication required”</li>
+<li>408 “request time-out”</li>
+<li>409 “conflict”</li>
+<li>410 “gone”</li>
+<li>411 “length required”</li>
+<li>412 “precondition failed”</li>
+<li>413 “request entity too large”</li>
+<li>414 “request-uri too large”</li>
+<li>415 “unsupported media type”</li>
+<li>416 “requested range not satisfiable”</li>
+<li>417 “expectation failed”</li>
+<li>418 “i’m a teapot”</li>
+<li>422 “unprocessable entity”</li>
+<li>423 “locked”</li>
+<li>424 “failed dependency”</li>
+<li>425 “unordered collection”</li>
+<li>426 “upgrade required”</li>
+<li>428 “precondition required”</li>
+<li>429 “too many requests”</li>
+<li>431 “request header fields too large”</li>
+<li>500 “internal server error”</li>
+<li>501 “not implemented”</li>
+<li>502 “bad gateway”</li>
+<li>503 “service unavailable”</li>
+<li>504 “gateway time-out”</li>
+<li>505 “http version not supported”</li>
+<li>506 “variant also negotiates”</li>
+<li>507 “insufficient storage”</li>
+<li>509 “bandwidth limit exceeded”</li>
+<li>510 “not extended”</li>
+<li>511 “network authentication required”</li>
+</ul>
+<p>NOTE: don’t worry too much about memorizing these strings, if you have a typo an error will be thrown, displaying this list so you can make a correction.</p>
+<h2 id="response-message" class="article-heading"><a href="#response-message" class="headerlink" title="response.message"></a>response.message<a class="article-anchor" href="#response-message" aria-hidden="true"></a></h2><p>Get response status message. By default, response.message is associated with response.status.</p>
+<h2 id="response-message-1" class="article-heading"><a href="#response-message-1" class="headerlink" title="response.message="></a>response.message=<a class="article-anchor" href="#response-message-1" aria-hidden="true"></a></h2><p>Set response status message to the given value.</p>
+<h2 id="response-length" class="article-heading"><a href="#response-length" class="headerlink" title="response.length="></a>response.length=<a class="article-anchor" href="#response-length" aria-hidden="true"></a></h2><p>Set response Content-Length to the given value.</p>
+<h2 id="response-length-1" class="article-heading"><a href="#response-length-1" class="headerlink" title="response.length"></a>response.length<a class="article-anchor" href="#response-length-1" aria-hidden="true"></a></h2><p>Return response Content-Length as a number when present, or deduce from this.body when possible, or undefined.</p>
+<h2 id="response-body" class="article-heading"><a href="#response-body" class="headerlink" title="response.body"></a>response.body<a class="article-anchor" href="#response-body" aria-hidden="true"></a></h2><p>Get response body.</p>
+<h2 id="response-body-1" class="article-heading"><a href="#response-body-1" class="headerlink" title="response.body="></a>response.body=<a class="article-anchor" href="#response-body-1" aria-hidden="true"></a></h2><p>Set response body to one of the following:</p>
+<ul>
+<li>string written</li>
+<li>Buffer written</li>
+<li>Stream piped</li>
+<li>Object json-stringified</li>
+<li>null no content response</li>
+</ul>
+<p>If response.status has not been set, Koa will automatically set the status to 200 or 204.</p>
+<h2 id="response-remove-field" class="article-heading"><a href="#response-remove-field" class="headerlink" title="response.remove(field)"></a>response.remove(field)<a class="article-anchor" href="#response-remove-field" aria-hidden="true"></a></h2><p>Remove header field.</p>
+<h2 id="response-type" class="article-heading"><a href="#response-type" class="headerlink" title="response.type"></a>response.type<a class="article-anchor" href="#response-type" aria-hidden="true"></a></h2><p>Get response Content-Type void of parameters such as “charset”.</p>
+<p>var ct = this.type;<br>// =&gt; “image/png”</p>
+<h2 id="response-type-1" class="article-heading"><a href="#response-type-1" class="headerlink" title="response.type="></a>response.type=<a class="article-anchor" href="#response-type-1" aria-hidden="true"></a></h2><p>Set response Content-Type via mime string or file extension.</p>
+<p>this.type = ‘text/plain; charset=utf-8’;<br>this.type = ‘image/png’;<br>this.type = ‘.png’;<br>this.type = ‘png’;<br>Note: when appropriate a charset is selected for you, for example response.type = ‘html’ will default to “utf-8”, however when explicitly defined in full as response.type = ‘text/html’ no charset is assigned.</p>
+<h2 id="response-is-types…" class="article-heading"><a href="#response-is-types…" class="headerlink" title="response.is(types…)"></a>response.is(types…)<a class="article-anchor" href="#response-is-types…" aria-hidden="true"></a></h2><p>Very similar to this.request.is(). Check whether the response type is one of the supplied types. This is particularly useful for creating middleware that manipulate responses.</p>
+<p>For example, this is a middleware that minifies all HTML responses except for streams.</p>
+<p>var minify = require(‘html-minifier’);</p>
+<p>app.use(function *minifyHTML(next){<br>  yield next;</p>
+<p>  if (!this.response.is(‘html’)) return;</p>
+<p>  var body = this.body;<br>  if (!body || body.pipe) return;</p>
+<p>  if (Buffer.isBuffer(body)) body = body.toString();<br>  this.body = minify(body);<br>});</p>
+<h2 id="response-redirect-url-alt" class="article-heading"><a href="#response-redirect-url-alt" class="headerlink" title="response.redirect(url, [alt])"></a>response.redirect(url, [alt])<a class="article-anchor" href="#response-redirect-url-alt" aria-hidden="true"></a></h2><p>Perform a [302] redirect to url.</p>
+<p>The string “back” is special-cased to provide Referrer support, when Referrer is not present alt or “/“ is used.</p>
+<p>this.redirect(‘back’);<br>this.redirect(‘back’, ‘/index.html’);<br>this.redirect(‘/login’);<br>this.redirect(‘<a href="http://google.com" target="_blank" rel="external">http://google.com</a>‘);<br>To alter the default status of 302, simply assign the status before or after this call. To alter the body, assign it after this call:</p>
+<p>this.status = 301;<br>this.redirect(‘/cart’);<br>this.body = ‘Redirecting to shopping cart’;</p>
+<h2 id="response-lastModified" class="article-heading"><a href="#response-lastModified" class="headerlink" title="response.lastModified"></a>response.lastModified<a class="article-anchor" href="#response-lastModified" aria-hidden="true"></a></h2><p>Return the Last-Modified header as a Date, if it exists.</p>
+<h2 id="response-lastModified-1" class="article-heading"><a href="#response-lastModified-1" class="headerlink" title="response.lastModified="></a>response.lastModified=<a class="article-anchor" href="#response-lastModified-1" aria-hidden="true"></a></h2><p>Set the Last-Modified header as an appropriate UTC string. You can either set it as a Date or date string.</p>
+<p>this.response.lastModified = new Date();</p>
+<h2 id="response-etag" class="article-heading"><a href="#response-etag" class="headerlink" title="response.etag="></a>response.etag=<a class="article-anchor" href="#response-etag" aria-hidden="true"></a></h2><p>Set the ETag of a response including the wrapped “s. Note that there is no corresponding response.etag getter.</p>
+<p>this.response.etag = crypto.createHash(‘md5’).update(this.body).digest(‘hex’);</p>
+<h1 id="Extra" class="article-heading"><a href="#Extra" class="headerlink" title="Extra"></a>Extra<a class="article-anchor" href="#Extra" aria-hidden="true"></a></h1><h2 id="res-write-content" class="article-heading"><a href="#res-write-content" class="headerlink" title="res.write(content)"></a>res.write(content)<a class="article-anchor" href="#res-write-content" aria-hidden="true"></a></h2><p>当chunks的时候，支持连续写入浏览器，然后end，此时需要使用write方法，而不是像express使用send</p>
+<h2 id="res-setHeader" class="article-heading"><a href="#res-setHeader" class="headerlink" title="res.setHeader"></a>res.setHeader<a class="article-anchor" href="#res-setHeader" aria-hidden="true"></a></h2><p>别名，为了兼容vary</p>
+<h2 id="res-getHeader" class="article-heading"><a href="#res-getHeader" class="headerlink" title="res.getHeader"></a>res.getHeader<a class="article-anchor" href="#res-getHeader" aria-hidden="true"></a></h2><p>别名，为了兼容vary</p>
+<h2 id="res-setStatus" class="article-heading"><a href="#res-setStatus" class="headerlink" title="res.setStatus"></a>res.setStatus<a class="article-anchor" href="#res-setStatus" aria-hidden="true"></a></h2><p>不在支持链式写法,但可以使用setStatus进行链式写法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">Slet</span>.<span class="title">BaseController</span> </span>&#123;</div><div class="line">  get (req, res) &#123; </div><div class="line">    <span class="keyword">var</span> a = req.query.a</div><div class="line"></div><div class="line">    <span class="comment">//  res.locals.user = &#123;a:1&#125;</span></div><div class="line">    <span class="comment">// return res.body = `hello world $&#123;a&#125;`</span></div><div class="line">    <span class="comment">// res.send(`hello world $&#123;a&#125;`)</span></div><div class="line">    <span class="comment">// return res.download('/lerna.json')</span></div><div class="line">    <span class="comment">// res.status = 201</span></div><div class="line">    <span class="keyword">return</span> res.setStatus(<span class="number">201</span>).end(<span class="string">'sss'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-12-13T02:41:24.000Z" itemprop="dateModified">上次更新：2016-12-13</time>
+                <time class="article-footer-updated" datetime="2016-12-26T08:13:06.000Z" itemprop="dateModified">上次更新：2016-12-26</time>
                 <a href="request.html" class="article-footer-prev" title="请求"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="events.html" class="article-footer-next" title="事件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -232,7 +328,7 @@ options
 <script>
   var disqus_shortname = 'sletjs';
   var disqus_url = 'https://sletjs.com/zh-cn/api/response.html';
-  var disqus_title = "控制台（Console）";
+  var disqus_title = "响应（Response）";
   var disqus_config = function(){
     this.language = 'zh';
   };
@@ -248,7 +344,7 @@ options
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概要"><span class="toc-text">概要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用法"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项-1"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#描述"><span class="toc-text">描述</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#范例"><span class="toc-text">范例</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Properties"><span class="toc-text">Properties</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#res-app"><span class="toc-text">res.app</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-headersSent"><span class="toc-text">res.headersSent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-locals"><span class="toc-text">res.locals</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Methods"><span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#res-append-field-value"><span class="toc-text">res.append(field [, value])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-attachment-filename"><span class="toc-text">res.attachment([filename])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-cookie-name-value-options"><span class="toc-text">res.cookie(name, value [, options])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-download-path-filename-fn"><span class="toc-text">res.download(path [, filename] [, fn])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-sendFile-path-options"><span class="toc-text">res.sendFile(path [, options] )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-end-data-encoding"><span class="toc-text">res.end([data] [, encoding])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-status-code"><span class="toc-text">res.status(code)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-vary-field"><span class="toc-text">res.vary(field)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-type-type"><span class="toc-text">res.type(type)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-sendStatus-statusCode"><span class="toc-text">res.sendStatus(statusCode)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-redirect-url-alt"><span class="toc-text">res.redirect(url, [alt])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-links-links"><span class="toc-text">res.links(links)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-location-path"><span class="toc-text">res.location(path)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-json-body"><span class="toc-text">res.json([body])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-jsonp-body"><span class="toc-text">res.jsonp([body])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-get-field"><span class="toc-text">res.get(field)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-format-object"><span class="toc-text">res.format(object)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-render-view-locals"><span class="toc-text">res.render(view [, locals])</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Koa"><span class="toc-text">Koa</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#response-header"><span class="toc-text">response.header</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-headers"><span class="toc-text">response.headers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-socket"><span class="toc-text">response.socket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-status"><span class="toc-text">response.status</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-status-1"><span class="toc-text">response.status=</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-message"><span class="toc-text">response.message</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-message-1"><span class="toc-text">response.message=</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-length"><span class="toc-text">response.length=</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-length-1"><span class="toc-text">response.length</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-body"><span class="toc-text">response.body</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-body-1"><span class="toc-text">response.body=</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-remove-field"><span class="toc-text">response.remove(field)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-type"><span class="toc-text">response.type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-type-1"><span class="toc-text">response.type=</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-is-types…"><span class="toc-text">response.is(types…)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-redirect-url-alt"><span class="toc-text">response.redirect(url, [alt])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-lastModified"><span class="toc-text">response.lastModified</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-lastModified-1"><span class="toc-text">response.lastModified=</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#response-etag"><span class="toc-text">response.etag=</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Extra"><span class="toc-text">Extra</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#res-write-content"><span class="toc-text">res.write(content)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-setHeader"><span class="toc-text">res.setHeader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-getHeader"><span class="toc-text">res.getHeader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#res-setStatus"><span class="toc-text">res.setStatus</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
