@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sletjs.com/zh-cn/docs/test.html</loc>
+    
+    <lastmod>2016-12-27T00:42:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sletjs.com/zh-cn/api/request.html</loc>
     
     <lastmod>2016-12-26T17:11:35.000Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://sletjs.com/zh-cn/docs/view.html</loc>
     
     <lastmod>2016-12-18T23:56:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sletjs.com/zh-cn/docs/test.html</loc>
-    
-    <lastmod>2016-12-18T23:53:46.000Z</lastmod>
     
   </url>
   
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/renderer.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/processor.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/router.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/scaffolds.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -184,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/posts.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/box.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -219,7 +219,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/processor.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/tag.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -233,14 +233,14 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/tag.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/posts.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/migrator.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/router.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/scaffolds.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/renderer.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -275,7 +275,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/helper.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/migrator.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/console.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/helper.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
@@ -331,7 +331,7 @@
   </url>
   
   <url>
-    <loc>https://sletjs.com/zh-cn/api/box.html</loc>
+    <loc>https://sletjs.com/zh-cn/api/console.html</loc>
     
     <lastmod>2016-12-13T02:41:24.000Z</lastmod>
     
