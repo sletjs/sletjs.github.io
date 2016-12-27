@@ -47,7 +47,7 @@
 <meta property="og:url" content="https://sletjs.com/zh-cn/api/request.html">
 <meta property="og:site_name" content="Slet">
 <meta property="og:description" content="The req object represents the HTTP request and has properties for the request query string, parameters, body, HTTP headers, and so on. In this documentation and by convention, the object is always ref">
-<meta property="og:updated_time" content="2016-12-27T16:18:23.000Z">
+<meta property="og:updated_time" content="2016-12-27T16:22:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="请求（Request）">
 <meta name="twitter:description" content="The req object represents the HTTP request and has properties for the request query string, parameters, body, HTTP headers, and so on. In this documentation and by convention, the object is always ref">
@@ -186,8 +186,10 @@
 <h2 id="req-protocol" class="article-heading"><a href="#req-protocol" class="headerlink" title="req.protocol"></a>req.protocol<a class="article-anchor" href="#req-protocol" aria-hidden="true"></a></h2><p>Contains the request protocol string: either http or (for TLS requests) https.</p>
 <p>When the trust proxy setting does not evaluate to false, this property will use the value of the X-Forwarded-Proto header field if present. This header can be set by the client or by the proxy.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">req.protocol</div><div class="line"><span class="comment">// =&gt; "http"</span></div></pre></td></tr></table></figure>
-<h2 id="req-query" class="article-heading"><a href="#req-query" class="headerlink" title="req.query"></a>req.query<a class="article-anchor" href="#req-query" aria-hidden="true"></a></h2><p>This property is an object containing a property for each query string parameter in the route. If there is no query string, it is the empty object, {}.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// GET /search?q=tobi+ferret</span></div><div class="line">req.query.q</div><div class="line"><span class="comment">// =&gt; "tobi ferret"</span></div><div class="line"></div><div class="line"><span class="comment">// GET /shoes?order=desc&amp;shoe[color]=blue&amp;shoe[type]=converse</span></div><div class="line">req.query.order</div><div class="line"><span class="comment">// =&gt; "desc"</span></div><div class="line"></div><div class="line">req.query.shoe.color</div><div class="line"><span class="comment">// =&gt; "blue"</span></div><div class="line"></div><div class="line">req.query.shoe.type</div><div class="line"><span class="comment">// =&gt; "converse"</span></div></pre></td></tr></table></figure>
+<h2 id="req-query" class="article-heading"><a href="#req-query" class="headerlink" title="req.query"></a>req.query<a class="article-anchor" href="#req-query" aria-hidden="true"></a></h2><p>Get parsed query-string, returning an empty object when no query-string is present. Note that this getter does not support nested parsing.</p>
+<p>For example “color=blue&amp;size=small”:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">  <span class="attr">color</span>: <span class="string">'blue'</span>,</div><div class="line">  <span class="attr">size</span>: <span class="string">'small'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>不支持嵌套，原因是采用的node.js自带的querystring，而非qs，如果想玩更复杂的，请使用req.qs来处理</p>
 <h2 id="req-route" class="article-heading"><a href="#req-route" class="headerlink" title="req.route"></a>req.route<a class="article-anchor" href="#req-route" aria-hidden="true"></a></h2><p>Contains the currently-matched route, a string. For example:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// slet</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyController</span> <span class="keyword">extends</span> <span class="title">BaseController</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span> (ctx, next) &#123;</div><div class="line">    <span class="keyword">super</span>(ctx, next)</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.path = <span class="string">'/user/:id'</span></div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  get (req, res) &#123;</div><div class="line">    <span class="built_in">console</span>.log(req.route)</div><div class="line">    <span class="keyword">return</span> <span class="string">'GET'</span></div><div class="line">  &#125; </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// express</span></div><div class="line">app.get(<span class="string">'/user/:id?'</span>, <span class="function"><span class="keyword">function</span> <span class="title">userIdHandler</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(req.route);</div><div class="line">  res.send(<span class="string">'GET'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>这个和express里的req.route类似，但返回的内容不一样。</p>
@@ -287,7 +289,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-12-27T16:18:23.000Z" itemprop="dateModified">上次更新：2016-12-27</time>
+                <time class="article-footer-updated" datetime="2016-12-27T16:22:06.000Z" itemprop="dateModified">上次更新：2016-12-27</time>
                 <a href="index.html" class="article-footer-prev" title="概述"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="response.html" class="article-footer-next" title="响应"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
